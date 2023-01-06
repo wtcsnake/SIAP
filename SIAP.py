@@ -38,12 +38,15 @@ def find_ac(list_ori, thy):
     return list_yao
 
 # %%单方识别
-def search_match(meds, method=1, weight=[0.2238, 0.3418, 0.2477, 0.1636, 0.0231], cons=0.6):
+weight=[0.2238, 0.3418, 0.2477, 0.1636, 0.0231]
+#weight=[0.2238, 0.3418, 0.2477, 0.1636, 0.0231]
+
+def search_match(meds, method=1, weight=weight, cons=0.6):
     '''
     全匹配算法
     :param meds:中药名序列
     :param cons:匹配度
-    :param method:方法，1查找匹配，2群臣佐使匹配
+    :param method:方法，1:ISR，2:SIAP-ALL, 3:SIAP+ALL
     :param weight: 权重
     :return:
     '''
